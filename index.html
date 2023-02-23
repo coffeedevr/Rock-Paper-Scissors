@@ -11,8 +11,6 @@
 
     <link rel="stylesheet" href="styles.css">
 
-
-
 </head>
 
 <body>
@@ -78,20 +76,26 @@
                     <div class="gameplay">
                         <div class="choice">
                             <p>Rock</p>
-                            <img src="img/rock-svgrepo-com.svg" height="75px" width="75px">
+                            <button id="Rock" onclick="game(this.id)">
+                                <img src="img/rock-svgrepo-com.svg" height="75px" width="75px">
+                            </button>
                         </div>
                         <div class="choice">
                             <p>Paper</p>
-                            <img src="img/paper-svgrepo-com.svg" height="75px" width="75px">
+                            <button id="Paper" onclick="game(this.id)">
+                                <img src="img/paper-svgrepo-com.svg" height="75px" width="75px">
+                            </button>
                         </div>
-                        <div class="choice">
+                        <div class="choice">    
                             <p>Scissors</p>
-                            <img src="img/scissor-svgrepo-com.svg" height="75px" width="75px">
+                            <button id="Scissors" onclick="game(this.id)">
+                                <img src="img/scissor-svgrepo-com.svg" height="75px" width="75px">
+                            </button>
                         </div>
                     </div>
                     <div class="gameresults">
                         <div class="textresults">
-                            <p><b>Pick your weapon!</b></p>
+                            <p id="weaponchoice">Pick your weapon!</p>
                             <p>Waiting for result...</p>
                         </div>
                     </div>
@@ -99,6 +103,8 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

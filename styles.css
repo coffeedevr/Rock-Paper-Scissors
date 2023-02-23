@@ -94,6 +94,11 @@ body {
     margin: 0px;
 }
 
+.choice button {
+    border-style: none;
+    background-color: #FFFFFF;
+}
+
 .scoretext h2{
     text-align: center;
     margin: 0px;
