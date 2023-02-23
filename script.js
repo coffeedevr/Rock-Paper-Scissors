@@ -1,6 +1,7 @@
 const choicetext = document.getElementById("weaponchoice");
 const playerscore = document.getElementById("myscore");
 const enemyscore = document.getElementById("theirscore");
+const announcement = document.getElementById("announcement");
 
 let pscore = 0;
 let escore = 0;
@@ -23,6 +24,7 @@ function playerWins(score) {
     } else {
         playerscore.innerText = pscore;
         enemyscore.innerText = escore;
+        announcement.innerText = "Waiting for result..."
     }
 }
 
@@ -36,16 +38,27 @@ function enemyWins(score){
     } else {
         playerscore.innerText = pscore;
         enemyscore.innerText = escore;
+        announcement.innerText = "Waiting for result..."
     }
 }
 
 function draw(){
     playerscore.innerText = pscore;
     enemyscore.innerText = escore;
+
+    if (escore == 0 && pscore == 0) {
+        announcement.innerText = "Waiting for result..."
+    }
 }
 
 function announcewinner() {
+    if (escore == 5) {
+        announcement.innerText = "Computer Wins!";
+    }
 
+    if  (pscore == 5) {
+        announcement.innerText = "Player Wins!"
+    }
 }
 
 function playRound(playerSelection, computerSelection) {

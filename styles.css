@@ -35,7 +35,7 @@ body {
 .deskicons img {
     width: 60px;
     height: 60px;
-    ;
+    cursor: pointer;
 }
 
 .game {
@@ -70,6 +70,7 @@ body {
     margin: 0px;
     padding: 9px 16px;
     text-align: center;
+    cursor: pointer;
 }
 
 .gamebody {
@@ -91,12 +92,19 @@ body {
 .choice p {
     display: flex;
     justify-content: center;
-    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 6px;
 }
 
 .choice button {
     border-style: none;
-    background-color: #FFFFFF;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform .2s; /* Animation */
+}
+
+.choice button:hover {
+    transform: scale(1.5);
 }
 
 .scoretext h2{
