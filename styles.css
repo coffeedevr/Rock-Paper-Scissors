@@ -34,7 +34,8 @@ body {
 
 .deskicons img {
     width: 60px;
-    height: 60px;;
+    height: 60px;
+    ;
 }
 
 .game {
@@ -42,7 +43,7 @@ body {
     width: 70vh;
     display: flex;
     flex-direction: column;
-    background-color:rgb(255, 255, 255)
+    background-color: rgb(255, 255, 255)
 }
 
 .gameheader {
@@ -72,6 +73,56 @@ body {
 }
 
 .gamebody {
-    text-align: center;
     color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameinstructions {
+    text-align: center;
+}
+
+.gameplay {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.choice p {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.scoretext h2{
+    text-align: center;
+    margin: 0px;
+}
+
+.gamescore {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.userscore {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.enemyscore {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.textresults  {
+    text-align: center;
 }
