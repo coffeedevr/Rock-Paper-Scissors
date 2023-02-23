@@ -1,0 +1,77 @@
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.desktop {
+    margin: 25px;
+    display: flex;
+}
+
+.icons {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.deskicons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.deskicons p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.deskicons img {
+    width: 60px;
+    height: 60px;;
+}
+
+.game {
+    border-style: ridge;
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(255, 255, 255)
+}
+
+.gameheader {
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+    border-bottom-style: ridge;
+}
+
+.headername {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gametitle {
+    margin: 0px;
+    color: black;
+}
+
+.close {
+    color: white;
+    background-color: rgb(207, 87, 87);
+    margin: 0px;
+    padding: 9px 16px;
+    text-align: center;
+}
+
+.gamebody {
+    text-align: center;
+    color: black;
+}
