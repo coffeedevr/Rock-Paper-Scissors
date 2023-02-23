@@ -7,6 +7,10 @@ body {
     color: #FFFFFF;
 }
 
+.screen  {
+    height: 100vh;
+}
+
 .desktop {
     margin: 25px;
     display: flex;
@@ -137,5 +141,9 @@ body {
 }
 
 .textresults  {
+    text-align: center;
+}
+
+.footer  {
     text-align: center;
 }

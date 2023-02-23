@@ -65,10 +65,10 @@ function playRound(playerSelection, computerSelection) {
     if (computerSelection == "Scissors") {
         if (playerSelection == "Paper") {
             enemyWins(escore);
-            return x = "You chose Paper! Paper loses to Scissors! Computer wins!";
+            return x = "You chose Paper! Computer chose Scissors! Computer wins!";
         } else if (playerSelection == "Rock") {
             playerWins(pscore);
-            return x = "You chose Rock! Rock wins against Scissors! You win!";
+            return x = "You chose Rock! Computer chose Scissors! You win!";
         }
         else {
             draw();
@@ -78,10 +78,10 @@ function playRound(playerSelection, computerSelection) {
     else if (computerSelection == "Paper") {
         if (playerSelection == "Rock") {
             enemyWins(escore);
-            return x = "You chose Rock! Rock loses to Paper! Computer wins!";
+            return x = "You chose Rock! Computer chose Paper! Computer wins!";
         } else if (playerSelection == "Scissors") {
             playerWins(pscore);
-            return x = "You chose Scissors! Scissors wins against Scissors! You win!";
+            return x = "You chose Scissors! Computer chose Paper! You win!";
         }
         else {
             draw();
@@ -90,10 +90,10 @@ function playRound(playerSelection, computerSelection) {
     } else {
         if (playerSelection == "Scissors") {
             enemyWins(escore);
-            return x = "You chose Scissors! Scissors loses to Rock! Computer wins!";
+            return x = "You chose Scissors! Computer chose Rock! Computer wins!";
         } else if (playerSelection == "Paper") {
             playerWins(pscore);
-            return x = "You chose Paper! Paper wins against Rock! You win!";
+            return x = "You chose Paper! Computer chose Rock! You win!";
         }
         else {
             draw();
