@@ -2,6 +2,7 @@ const choicetext = document.getElementById("weaponchoice");
 const playerscore = document.getElementById("myscore");
 const enemyscore = document.getElementById("theirscore");
 const announcement = document.getElementById("announcement");
+const btn = document.querySelectorAll('button');
 
 let pscore = 0;
 let escore = 0;
@@ -18,13 +19,13 @@ function playerWins(score) {
     pscore = parseInt(score) + 1;
     if (pscore == 5) {
         announcewinner();
-        playerscore.innerText = 5;
+        playerscore.textContent = 5;
         pscore = 0;
         escore = 0;
     } else {
-        playerscore.innerText = pscore;
-        enemyscore.innerText = escore;
-        announcement.innerText = "Waiting for result..."
+        playerscore.textContent = pscore;
+        enemyscore.textContent = escore;
+        announcement.textContent = "Waiting for result..."
     }
 }
 
@@ -32,32 +33,32 @@ function enemyWins(score){
     escore = parseInt(score) + 1;
     if (escore == 5) {
         announcewinner();
-        enemyscore.innerText = 5;
+        enemyscore.textContent = 5;
         pscore = 0;
         escore = 0;
     } else {
-        playerscore.innerText = pscore;
-        enemyscore.innerText = escore;
-        announcement.innerText = "Waiting for result..."
+        playerscore.textContent = pscore;
+        enemyscore.textContent = escore;
+        announcement.textContent = "Waiting for result..."
     }
 }
 
 function draw(){
-    playerscore.innerText = pscore;
-    enemyscore.innerText = escore;
+    playerscore.textContent = pscore;
+    enemyscore.textContent = escore;
 
     if (escore == 0 && pscore == 0) {
-        announcement.innerText = "Waiting for result..."
+        announcement.textContent = "Waiting for result..."
     }
 }
 
 function announcewinner() {
     if (escore == 5) {
-        announcement.innerText = "Computer Wins!";
+        announcement.textContent = "Computer Wins!";
     }
 
     if  (pscore == 5) {
-        announcement.innerText = "Player Wins!"
+        announcement.textContent = "Player Wins!"
     }
 }
 
@@ -102,6 +103,8 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game(buttonpressed) {
-    choicetext.innerHTML = playRound(buttonpressed, getComputerChoice()); 
-}
+btn.forEach((button) => {
+    button.addEventListener('click', () =>  {
+        choicetext.innerText = playRound(button.id, getComputerChoice());
+    });
+});
